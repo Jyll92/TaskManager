@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#menu {
+    width: 700px;
+    padding: 20px;
+}
+h1 {
+    background-color: #202020;
+    color: #d668cd;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    text-align: center;
+}
+h4 {
+    color: #d699d1;
+    padding: 5px;
+    padding-left: 45px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#menu h4:nth-child(even):hover {
+    background-color: hotpink;
+    color: black;
+    transform: scaleY(1.15);
+}
+#menu h4:nth-child(odd):hover {
+    background-color: hotpink;
+    color: black;
+    transform: scaleY(1.15);
+}
+
+#menu h4:nth-child(even) {
+    background-color: #2e2e2e;
+}
+#menu h4:nth-child(odd) {
+    background-color: #3a3a3a;
+}
+
+#close {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    left: 690px;
+  }
+
+#bar1,
+#bar2 {
+  width: 28px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: rgb(131, 6, 79);
+  margin: 19px 0;
+  transition: all 0.2s linear;
+}
+
+#bar1 {
+    transform: rotate(-45deg) translate(-10px, 6px);
+}
+#bar2 {
+    transform: rotate(45deg) translate(-10px, -6px);
+}
+
+#close:hover #bar1, #close:hover #bar2 {
+    background-color: rgb(220, 0, 65);
+    box-shadow: 0px 0px 1px 0px rgb(255, 0, 128);
+}
+
+#tasksList {
+    list-style-type: none;
+    color: #d699d1;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#tasksList li:nth-child(even) {
+    background-color: #2e2e2e;
+    padding: 3px;
+    padding-left: 18px;
+}
+#tasksList li:nth-child(odd) {
+    background-color: #3a3a3a;
+    padding: 3px;
+    padding-left: 18px;
+}
+
+#returnMainMenu {
+    padding: 12px;
+    margin: 20px 30%;
+    width: 40%;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#taskAdder {
+    background-color: #2e2e2e;
+    padding: 20px;
+    padding-bottom: 55px;
+}
+#taskAdder input {
+    width: 70%;
+    font-size: 1.2rem;
+}
+#taskAdder button {
+    width: 20%;
+    font-size: 1.2rem;
+    margin-left: 5%;
+}
+
+#tasksRemovalList div:nth-child(odd) {
+    background-color: #3a3a3a;
+    color: #d699d1;
+    padding: 8px;
+}
+#tasksRemovalList div:nth-child(even) {
+    background-color: #2e2e2e;
+    color: #d699d1;
+    padding: 8px;
+}
+
+#tasksRemovalList div input {
+    margin-right: 20px;
+}
+#tasksRemovalList div label {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#tasksRemovalList button {
+    width: 80%;
+    margin: 20px 10%;
+    font-size: 1.3rem;
+}
+
+#confirmClose {
+    z-index: 99;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    width: 660px;
+    height: 450px;
+    background-color: rgb(20, 20, 20);
+}
+#confirmClose h3 {
+    color: magenta;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+#confirmClose button {
+    height: 120px;
+    width: 400px;
+    position: relative;
+    margin: 30px auto;
+    left: 130px;
+    font-size: 1.6rem;
+    background-color: #302f2f;
+    color: rgb(158, 28, 158);
+    cursor: pointer;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#confirmClose button:hover {
+    background-color: #413f3f;
+    color: rgb(175, 36, 175);
+}
+#confirmRemoved {
+    z-index: 99;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    width: 660px;
+    height: 250px;
+    background-color: rgb(20, 20, 20);
+}
+#confirmRemoved h3 {
+    color: magenta;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+#confirmRemoved button {
+    height: 120px;
+    width: 400px;
+    position: relative;
+    margin: 30px auto;
+    left: 130px;
+    font-size: 1.6rem;
+    background-color: #302f2f;
+    color: rgb(158, 28, 158);
+    cursor: pointer;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#confirmRemoved button:hover {
+    background-color: #413f3f;
+    color: rgb(175, 36, 175);
+}
+
+#newTaskAdded {
+    z-index: 99;
+    position: absolute;
+    top: 110px;
+    left: 40px;
+    width: 465px;
+    font-size: 1.1rem;
+    padding: 4px;
+    background-color: rgb(37, 102, 57);
+    border-radius: 5px;
+    color: white;
+}
+
+#launchTaskManager {
+    height: 120px;
+    width: 400px;
+    position: relative;
+    margin: 30px auto;
+    left: 130px;
+    font-size: 1.6rem;
+    background-color: #302f2f;
+    color: rgb(158, 28, 158);
+    cursor: pointer;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#launchTaskManager button:hover {
+    background-color: #413f3f;
+    color: rgb(175, 36, 175);
+}
